@@ -1,10 +1,12 @@
-package server.core;
+package server;
+
+import java.io.IOException;
 
 import ocsf.server.AbstractServer;
 import ocsf.server.ConnectionToClient;
 import server.config.ServerConfig;
+import server.core.ClientHandler;
 import server.utils.ServerLogger;
-import java.io.IOException;
 
 /**
  * Singleton server implementation extending OCSF AbstractServer.

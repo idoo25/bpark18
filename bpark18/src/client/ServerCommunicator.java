@@ -1,11 +1,16 @@
-package client.core;
+package client;
 
-import entities.Message;
-import entities.MessageType;
-import client.service.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import client.core.ParkingClient;
+import client.service.ParkingService;
 import client.utils.ClientLogger;
 import client.utils.ClientMessageHandler;
-import java.io.*;
+import entities.Message;
 
 /**
  * Handles communication with the server.

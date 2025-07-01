@@ -6,12 +6,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
-import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+import entities.Message;
 
 /**
  * EmailService for BPark System - Hebrew Only Handles all email notifications
@@ -51,7 +52,7 @@ public class EmailService {
             
             // Set sender
             message.setFrom(new InternetAddress(GMAIL_USERNAME, COMPANY_NAME + " System"));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
+            message.addRecipient(Message.Message.RecipientType.TO, new InternetAddress(recipientEmail));
             
             // Get email content based on type
             EmailContent content = generateEmailContent(type, customerName, additionalData);

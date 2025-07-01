@@ -1,13 +1,15 @@
 package server.business;
 
-import entities.*;
-import server.database.DBController;
-import server.database.DatabaseQueries;
-import server.utils.ServerLogger;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
+import entities.Message;
+import entities.MessageType;
+import server.DBController;
+import server.DatabaseQueries;
+import server.utils.ServerLogger;
 
 /**
  * Manages parking reservations.

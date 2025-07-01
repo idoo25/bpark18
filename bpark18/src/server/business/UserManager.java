@@ -1,13 +1,16 @@
 package server.business;
 
-import entities.*;
-import server.database.DBController;
-import server.database.DatabaseQueries;
-import server.utils.ServerLogger;
-import ocsf.server.ConnectionToClient;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.concurrent.ConcurrentHashMap;
+
+import entities.Message;
+import entities.MessageType;
+import entities.ParkingSubscriber;
+import ocsf.server.ConnectionToClient;
+import server.DBController;
+import server.DatabaseQueries;
+import server.utils.ServerLogger;
 
 /**
  * Manages user authentication and user-related operations.

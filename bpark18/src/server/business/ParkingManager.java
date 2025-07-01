@@ -1,14 +1,16 @@
 package server.business;
 
-import entities.*;
-import server.config.ServerConfig;
-import server.database.DBController;
-import server.database.DatabaseQueries;
-import server.utils.ServerLogger;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+
+import entities.Message;
+import entities.MessageType;
+import server.DBController;
+import server.DatabaseQueries;
+import server.config.ServerConfig;
+import server.utils.ServerLogger;
 
 /**
  * Manages parking operations and spot availability.

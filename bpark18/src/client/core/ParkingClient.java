@@ -1,10 +1,12 @@
 package client.core;
 
-import ocsf.client.AbstractClient;
+import java.io.IOException;
+
+import client.ServerCommunicator;
 import client.config.ClientConfig;
 import client.utils.ClientLogger;
 import entities.Message;
-import java.io.IOException;
+import ocsf.client.AbstractClient;
 
 /**
  * Singleton client implementation extending OCSF AbstractClient.
@@ -105,12 +107,6 @@ public class ParkingClient extends AbstractClient {
     }
     
     @Override
-    protected void connectionException(Exception exception) {
-        logger.logError("Connection exception: " + exception.getMessage());
-        handleConnectionError();
-    }
-    
-    @Override
     protected void connectionEstablished() {
         isConnected = true;
         logger.log("Connection established with server");
@@ -160,3 +156,4 @@ public class ParkingClient extends AbstractClient {
         return super.isConnected() && isConnected;
     }
 }
+

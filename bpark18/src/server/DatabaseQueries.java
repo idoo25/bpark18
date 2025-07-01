@@ -1,4 +1,4 @@
-package server.database;
+package server;
 
 /**
  * Centralized SQL query management.

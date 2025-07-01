@@ -1,8 +1,8 @@
-package server;
+package server;`r`n`r`nimport java.io.IOException;
 
+
+import java.io.IOException;
 import server.config.ServerConfig;
-import server.core.ParkingServer;
-import server.database.DBController;
 import server.utils.ServerLogger;
 
 /**
@@ -11,7 +11,7 @@ import server.utils.ServerLogger;
  */
 public class ServerApp {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try {
             // Initialize logger
             ServerLogger.getInstance().log("Starting Parking Server Application...");
@@ -48,3 +48,5 @@ public class ServerApp {
         }
     }
 }
+
+

@@ -1,4 +1,4 @@
-package client.service;
+package client;
 
 import client.core.ParkingClient;
 import client.utils.ClientLogger;
